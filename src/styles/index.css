@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+	width: 0.2rem;
+	background-color: #454545;
+	border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #ffffff39;
+	width: 0.2rem;
+	border-radius: 1rem;
+}
+
+body {
+	scrollbar-width: thin;
+	scrollbar-color: #ffffff39 #454545;
+}
+
+@layer components {
+	@font-face {
+		font-family: "Montserrat-ExtraBold";
+		src: url(../assets/fonts/Montserrat-ExtraBold.ttf);
+	}
+	@font-face {
+		font-family: "Montserrat-SemiBold";
+		src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+	}
+	@font-face {
+		font-family: "Montserrat-Regular";
+		src: url(../assets/fonts/Montserrat-Regular.ttf);
+	}
+	@font-face {
+		font-family: "Montserrat-Light";
+		src: url(../assets/fonts/Montserrat-Light.ttf);
+	}
+	h1 {
+		@apply text-3xl sm:text-4xl font-m-extraBold text-yellow-500;
+	}
+	h2 {
+		@apply text-xl sm:text-2xl font-m-semiBold;
+	}
+	p {
+		@apply text-base sm:text-lg font-m-regular;
+	}
+
+	.coin_description a {
+		@apply text-yellow-400;
+	}
+
+	.loading_animation {
+		animation: loading 10s linear infinite;
+	}
+
+	@keyframes loading {
+		from {
+			transform: rotateZ(0deg);
+		}
+		from {
+			transform: rotateZ(3600deg);
+		}
+	}
+
+	.paginationLiTags {
+		@apply border-2 border-yellow-500 sm:rounded-md w-8 h-8 smaller:w-10 smaller:h-10 cursor-pointer;
+	}
+	.paginationATags {
+		@apply w-full h-full flex items-center justify-center text-yellow-500 text-xs smaller:text-base;
+	}
+}

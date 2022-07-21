@@ -31,7 +31,7 @@ const CoinsTable = ({ handleSearch, page }: CoinsTableProps) => {
 							<tr
 								key={idx}
 								onClick={() => navigate(`/coins/${row.id}`)}
-								className="w-full cursor-pointer border-b-[1px] border-b-gray-600 flex items-center justify-between"
+								className="w-full cursor-pointer border-b-[0.0625em] border-b-gray-600 flex items-center justify-between"
 							>
 								<td className="flex items-center gap-3 py-6 w-48 mr-8">
 									<img src={row?.image} alt={row.name} className="w-8 h-8" />

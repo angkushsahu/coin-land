@@ -5,7 +5,7 @@ const ErrorPage: FC = () => {
 	const navigate: NavigateFunction = useNavigate();
 
 	return (
-		<section className="flex flex-col items-center justify-center min-h-screen p-8">
+		<main className="flex flex-col items-center justify-center min-h-screen p-8">
 			<h1 className="text-center text-8xl smaller:text-9xl">404</h1>
 			<h2 className="text-center mt-5 mb-12">
 				This page either has been moved or does not exist
@@ -16,7 +16,7 @@ const ErrorPage: FC = () => {
 			>
 				Back to home
 			</button>
-		</section>
+		</main>
 	);
 };
 

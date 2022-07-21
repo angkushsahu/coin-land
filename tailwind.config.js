@@ -3,7 +3,7 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
-				smaller: "420px",
+				smaller: "26.25em",
 			},
 			fontFamily: {
 				"m-light": ["Montserrat-Light", "sans-serif"],

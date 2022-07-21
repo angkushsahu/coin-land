@@ -45,7 +45,7 @@ const CoinGraph = ({ id }: CoinGraphProps) => {
 	}, [currency, days]);
 
 	return (
-		<div className="lg:w-[70%] lg:pl-8 flex flex-col items-center justify-center gap-6 mt-16 lg:mt-0">
+		<section className="lg:w-[70%] lg:pl-8 flex flex-col items-center justify-center gap-6 mt-16 lg:mt-0">
 			{!historicalData ? (
 				<Loading />
 			) : (
@@ -94,7 +94,7 @@ const CoinGraph = ({ id }: CoinGraphProps) => {
 					</div>
 				</>
 			)}
-		</div>
+		</section>
 	);
 };
 

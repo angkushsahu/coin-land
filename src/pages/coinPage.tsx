@@ -25,10 +25,10 @@ const CoinPage: FC = () => {
 
 	return (
 		<BaseLayout>
-			<section className="py-12 px-8 flex flex-col lg:flex-row">
+			<main className="py-12 px-8 flex flex-col lg:flex-row">
 				<CoinDescription coin={coin} />
 				<CoinGraph id={id} />
-			</section>
+			</main>
 		</BaseLayout>
 	);
 };

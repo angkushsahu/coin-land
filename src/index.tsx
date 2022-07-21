@@ -7,11 +7,9 @@ import * as serviceWorker from "./serviceWorker";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-	<React.StrictMode>
-		<CryptoContext>
-			<App />
-		</CryptoContext>
-	</React.StrictMode>,
+	<CryptoContext>
+		<App />
+	</CryptoContext>,
 );
 
 serviceWorker.register();

@@ -35,6 +35,9 @@ body {
 		font-family: "Montserrat-Light";
 		src: url(../assets/fonts/Montserrat-Light.ttf);
 	}
+	body {
+		@apply bg-[#001e3c];
+	}
 	h1 {
 		@apply text-3xl sm:text-4xl font-m-extraBold text-yellow-500;
 	}

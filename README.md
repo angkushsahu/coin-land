@@ -4,6 +4,8 @@ Track coins and their progress in this app. Now you can add your favorite coin t
 
 ### Visit :- [Coin-land](https://coin-land.netlify.com)
 
+![Coin Land](https://res.cloudinary.com/dvhucdquc/image/upload/v1658428724/ProjectsHomeImages/coin-land_qifnen.png)
+
 ## Install
 
 Download the code of this project or clone it to your machine

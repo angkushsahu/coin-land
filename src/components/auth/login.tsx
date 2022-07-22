@@ -49,7 +49,6 @@ const Login = () => {
 	const signInWithGoole = async () => {
 		try {
 			const result = await signInWithPopup(auth, googleProvider);
-			console.log(result);
 			toast.success("Login Successful", toastOptions);
 			setShowLoginModal(false);
 		} catch (error: any) {

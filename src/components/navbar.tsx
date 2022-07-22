@@ -31,7 +31,7 @@ const Navbar = () => {
 						type="button"
 						onClick={() => setShowUserSideBar(previousValue => !previousValue)}
 					>
-						Show User
+						Watchlist
 					</button>
 				) : (
 					<button

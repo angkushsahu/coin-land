@@ -47,13 +47,14 @@ const Login = () => {
 	const googleProvider = new GoogleAuthProvider();
 
 	const signInWithGoole = async () => {
-		try {
-			const result = await signInWithPopup(auth, googleProvider);
-			toast.success("Login Successful", toastOptions);
-			setShowLoginModal(false);
-		} catch (error: any) {
-			toast.error("Some error occurred, please try again later", toastOptions);
-		}
+		// try {
+		const result = await signInWithPopup(auth, googleProvider);
+		console.log(result);
+		toast.success("Login Successful", toastOptions);
+		setShowLoginModal(false);
+		// } catch (error: any) {
+		// toast.error("Some error occurred, please try again later", toastOptions);
+		// }
 	};
 
 	return (

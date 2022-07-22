@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import GoogleButton from "react-google-button";
 import { toastOptions, validateEmail } from "../../utils";
 import { auth } from "../../firebase";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,6 +53,19 @@ const Signup = () => {
 		}
 	};
 
+	const googleProvider = new GoogleAuthProvider();
+
+	const signInWithGoole = async () => {
+		try {
+			const result = await signInWithPopup(auth, googleProvider);
+			console.log(result);
+			toast.success("Login Successful", toastOptions);
+			setShowLoginModal(false);
+		} catch (error: any) {
+			toast.error("Some error occurred, please try again later", toastOptions);
+		}
+	};
+
 	return (
 		<form onSubmit={handleSignupSubmit}>
 			<h2 className="text-center my-4">Signup</h2>
@@ -90,6 +104,9 @@ const Signup = () => {
 			>
 				Signup
 			</button>
+			<p className="text-gray-300 my-4 text-center">OR</p>
+			<GoogleButton type="dark" style={{ width: "100%" }} onClick={signInWithGoole} />
+			<ToastContainer />
 			<ToastContainer />
 		</form>
 	);
